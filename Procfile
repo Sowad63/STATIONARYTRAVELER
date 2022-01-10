@@ -1,0 +1,1 @@
+web: gunicorn server:app --preload --log-file=- -w 4 --reload

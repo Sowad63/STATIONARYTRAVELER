@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="jumbotron text-center" style="text-align: center;margin-top: 16px">
+        <img src="{{ book_image }}" alt=""
+             class="d-inline-block align-text-top" width="400" height="400">
+        {#        <h3 style="font-weight: bolder"><b>Stationary Traveller</b></h3>#}
+        <h5 style="padding: 24px"><b>{{ book_name }}</b></h5>
+    </div>
+
+    <section class="container" style="margin-top: 10px">
+        <div class="jumbotron text-center" style="text-align: center;">
+            <h4><b>By {{ author_name }}</b></h4>
+            <p style="padding: 20px">
+
+                {%if short_desc%} {{short_desc}} {%else%}Welcome to Stationary Traveller, your number one source for all types of books. We're dedicated to
+                giving you the very best of [product], with a focus on [three characteristics, ie: dependability,
+                customer service and uniqueness.]
+                Founded in [year] by [founder's name], [store name] has come a long way from its beginnings in a
+                [starting location, ie: home office, toolshed, Houston, TX.]. When [store founder] first started out,
+                his/her passion for [passion of founder, ie: helping other parents be more eco-friendly, providing the
+                best equipment for his fellow musicians] drove him to [action, ie: do intense research, quit her day
+                job], and gave him the impetus to turn hard work and inspiration into to a booming online store. We now
+                serve customers all over [place, ie: the US, the world, the Austin area], and are thrilled to be a part
+                of the [adjective, ie: quirky, eco-friendly, fair trade] wing of the [industry type, ie: fashion, baked
+                goods, watches] industry. {%endif%}
+            </p>
+
+            <form class="form-inline">
+
+                <button type="button" class="btn btn-danger mb-2" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    Download PDF</button>
+                <button type="button" class="btn btn-primary mb-2" style="margin-left: 20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    Buy Book</button>
+            </form>
+        </div>
+
+    </section>
+{% endblock %}

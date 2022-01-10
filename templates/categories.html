@@ -1,0 +1,719 @@
+{% extends 'base.html' %}
+{% block title %} Categories {% endblock %}
+{% block body %}
+    <script>
+    function redirect_to(book_name, book_image, author_name, short_desc) {
+        $.post("/submit_book_details",
+            {
+                book_name: book_name,
+                book_image: book_image,
+                author_name: author_name,
+                short_desc: short_desc
+            },
+            function (data, status) {
+                // alert("Data: " + JSON.stringify(data) + "\nStatus: " + status)
+                window.open(data['url'], '_blank').focus();
+            });
+    }
+    </script>
+    <div class="jumbotron text-center" style="text-align: center;padding: 40px">
+
+        {#        <h3 style="font-weight: bolder"><b>Stationary Traveller</b></h3>#}
+        <h5><b>B O O K &nbsp;&nbsp; C A T E G O R I E S</b></h5>
+    </div>
+
+    <div class="container" id="best_deals">
+        <h4 style="text-align: center;padding: 30px;font-weight: bold;color: #44cc35">CLASSIC</h4>
+        <div class="book-slide">
+            <div class="book js-flickity" data-flickity-options='{ "wrapAround": true }'>
+                <div class="book-cell">
+                    <div class="book-img">
+                        <img src="https://m.media-amazon.com/images/I/51mRRHTzRWL.jpg" alt=""
+                             class="book-photo">
+                    </div>
+                    <div class="book-content">
+                        <div class="book-title">MOBY DICK</div>
+                        <div class="book-author">by HERMAN MELVILLE</div>
+                        <div class="rate">
+                            <fieldset class="rating">
+                                <input type="checkbox" id="star5" name="rating" value="5"/>
+                                <label class="full" for="star5"></label>
+                                <input type="checkbox" id="star4" name="rating" value="4"/>
+                                <label class="full" for="star4"></label>
+                                <input type="checkbox" id="star3" name="rating" value="3"/>
+                                <label class="full" for="star3"></label>
+                                <input type="checkbox" id="star2" name="rating" value="2"/>
+                                <label class="full" for="star2"></label>
+                                <input type="checkbox" id="star1" name="rating" value="1"/>
+                                <label class="full" for="star1"></label>
+                            </fieldset>
+                            <span class="book-voters">1.987 voters</span>
+                        </div>
+                        <div class="book-sum"><h3>85/- <span style="font-size: 16px">BDT.</span></h3>
+                        </div>
+                        <div class="book-see" style="cursor:pointer;" onclick="redirect_to('MOBY DICK',
+                        'https://m.media-amazon.com/images/I/51mRRHTzRWL.jpg',
+                        'HERMAN MELVILLE',
+                        'Moby-Dick is an 1851 novel by American writer Herman Melville.The book is sailor Ishmael's narrative of the obsessive quest of Ahab, captain of the whaling ship Pequod, for revenge on Moby Dick, the giant white sperm whale that on the ship's previous voyage bit off Ahab's leg at the knee.A contribution to the literature of the American Renaissance, its reputation as a Great American Novel was established only in the 20th century, after the centennial of its authors birth.')">See The Book
+                        </div>
+
+                    </div>
+                </div>
+                <div class="book-cell">
+                    <div class="book-img">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/51BATe+7wRS._SY344_BO1,204,203,200_.jpg" alt=""
+                             class="book-photo">
+                    </div>
+                    <div class="book-content">
+                        <div class="book-title">THE PICTURE OF DORIAN GRAY</div>
+                        <div class="book-author">by OSCAR WILD</div>
+                        <div class="rate">
+                            <fieldset class="rating blue">
+                                <input type="checkbox" id="star6" name="rating" value="5"/>
+                                <label class="full1" for="star6"></label>
+                                <input type="checkbox" id="star7" name="rating" value="4"/>
+                                <label class="full1" for="star7"></label>
+                                <input type="checkbox" id="star8" name="rating" value="3"/>
+                                <label class="full1" for="star8"></label>
+                                <input type="checkbox" id="star9" name="rating" value="2"/>
+                                <label class="full1" for="star9"></label>
+                                <input type="checkbox" id="star10" name="rating" value="1"/>
+                                <label class="full1" for="star10"></label>
+                            </fieldset>
+                            <span class="book-voters">1.987 voters</span>
+                        </div>
+                        <div class="book-sum"><h3>165/- <span style="font-size: 16px">BDT.</span></h3>
+                        </div>
+                        <div class="book-see book-blue" style="cursor: pointer"
+                             onclick="redirect_to('THE PICTURE OF DORIAN GRAY',
+                        'https://images-na.ssl-images-amazon.com/images/I/51BATe+7wRS._SY344_BO1,204,203,200_.jpg',
+                        'OSCAR WILD',
+                        '“The soul is a terrible reality. It can be bought and sold and bartered away.” meet Dorian Gray, the beautiful young man with an impossibly charming face and spirit. As he sits for Basil Hallward—a deeply moral artist and a friend of the impish Lord Henry—who becomes obsessed with his beauty and wants to paint him, Dorian is enchanted by the perfection of his portrait. But, influenced by the well-phrased epigrams of the hedonist Lord Henry on the transience of youth and beauty, Dorian becomes jealous of it and wishes that the portrait bear the scars of his passing youth and age, while he would remain young forever. And alas, his wish comes true! Br>enticed into dissolution and degradation while his portrait is aging in the attic, Dorian engages in scandals and sinful pleasures. We see him go from good to evil. But is he any happier? This is a leather-bound deluxe edition of the only novel written by Oscar Wilde, the picture of Dorian Gray is an arresting moral commentary and a classic example of Gothic fiction. With an unparalleled depiction of the Faustian bargain, this parable of aesthetic ideal remains a literary masterpiece almost 125 years after its publication.')">See The Book
+                        </div>
+                    </div>
+                </div>
+                <div class="book-cell">
+                    <div class="book-img">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/41IpL+kC5US._SX322_BO1,204,203,200_.jpg"
+                             alt=""
+                             class="book-photo">
+                    </div>
+                    <div class="book-content">
+                        <div class="book-title">THE ODYSSEY</div>
+                        <div class="book-author">by HOMER</div>
+                        <div class="rate">
+                            <fieldset class="rating purple">
+                                <input type="checkbox" id="star11" name="rating" value="5"/>
+                                <label class="full" for="star11"></label>
+                                <input type="checkbox" id="star12" name="rating" value="4"/>
+                                <label class="full" for="star12"></label>
+                                <input type="checkbox" id="star13" name="rating" value="3"/>
+                                <label class="full" for="star13"></label>
+                                <input type="checkbox" id="star14" name="rating" value="2"/>
+                                <label class="full" for="star14"></label>
+                                <input type="checkbox" id="star15" name="rating" value="1"/>
+                                <label class="full" for="star15"></label>
+                            </fieldset>
+                            <span class="book-voters">1.987 voters</span>
+                        </div>
+                        <div class="book-sum">
+                            <h3>315/- <span style="font-size: 16px">BDT.</span></h3>
+                        </div>
+                        <div class="book-see book-pink" style="cursor:pointer;" onclick="redirect_to('THE ODYSSEY',
+                        'https://images-na.ssl-images-amazon.com/images/I/41IpL+kC5US._SX322_BO1,204,203,200_.jpg',
+                        'HOMER',
+                        'After the fall of Troy, the intrepid Odysseus sets sail for Ithaca. En route, his ships are blown off course and Odysseus and his men must face a series of adventures before they can reach home. He has to beguile the enchantress Circe, defeat the six-headed sea monster Scylla, and resist the lure of the Siren’s song. And as he negotiates the favours bestowed on him by the goddess Athena and faces the wrath of god of the sea, Poseidon. Odysseus understands that he will have to rely on himself to overcome this ultimate test of endurance.The Odyssey is one of the most important epic poems of Greek mythology. It describes a rousing adventure and, in doing so, explores the various facets of the human condition.')">See The Book
+                        </div>
+                    </div>
+                </div>
+                <div class="book-cell">
+                    <div class="book-img">
+                        <img src="https://m.media-amazon.com/images/I/71Q-cHRwiGL._AC_UY327_FMwebp_QL65_.jpg" alt=""
+                             class="book-photo">
+                    </div>
+                    <div class="book-content">
+                        <div class="book-title">A TALE OF TWO CITIES</div>
+                        <div class="book-author">by CHARLES DICKENS</div>
+                        <div class="rate">
+                            <fieldset class="rating yellow">
+                                <input type="checkbox" id="star16" name="rating" value="5"/>
+                                <label class="full" for="star16"></label>
+                                <input type="checkbox" id="star17" name="rating" value="4"/>
+                                <label class="full" for="star17"></label>
+                                <input type="checkbox" id="star18" name="rating" value="3"/>
+                                <label class="full" for="star18"></label>
+                                <input type="checkbox" id="star19" name="rating" value="2"/>
+                                <label class="full" for="star19"></label>
+                                <input type="checkbox" id="star20" name="rating" value="1"/>
+                                <label class="full" for="star20"></label>
+                            </fieldset>
+                            <span class="book-voters">1.987 voters</span>
+                        </div>
+                        <div class="book-sum"><h3>455/- <span style="font-size: 16px">BDT.</span></h3>
+                        </div>
+                        <div class="book-see book-yellow" style="cursor:pointer;" onclick="redirect_to('A TALE OF TWO CITIES',
+                        'https://m.media-amazon.com/images/I/71Q-cHRwiGL._AC_UY327_FMwebp_QL65_.jpg',
+                        'CHARLES DICKENS',
+                        'One of the best-selling novels of all time, A Tale of Two Cities is arguably Charles Dickens' best historical fiction stories. It explores the intricacies of a pre-revolution France and the simmering anger that led to the end of a monarchy.
+
+Follow Doctor Manette, newly released from an eighteen-year imprisonment in the infamous Bastille, as he moves away from the tyrannical French monarchy.Liberty, Equality, Fraternity, or Death!Walk with Manette through the streets of nineteenth-century London as the anger of the people reached its boiling point. The political tensions are high, they've had enough, and they are not afraid anymore.This story is one of conflicts, brutality, and of a history-altering revolution. Charles Dickens' best-selling novel is a roller coaster that will carry readers through some of the most tumultuous events in history. Stand in the shoes of the people who lived it and leave with a completely new perspective on what it means to be human.')">See The Book
+                        </div>
+                    </div>
+                </div>
+                <div class="book-cell">
+                    <div class="book-img">
+                        <img src="https://m.media-amazon.com/images/I/71Coj2Sql6L._AC_UY327_FMwebp_QL65_.jpg" alt=""
+                             class="book-photo">
+                    </div>
+                    <div class="book-content">
+                        <div class="book-title">THE LORD OF THE RINGS</div>
+                        <div class="book-author">by JRR TOLKIEN</div>
+                        <div class="rate">
+                            <fieldset class="rating dark-purp">
+                                <input type="checkbox" id="star21" name="rating" value="5"/>
+                                <label class="full" for="star21"></label>
+                                <input type="checkbox" id="star22" name="rating" value="4"/>
+                                <label class="full" for="star22"></label>
+                                <input type="checkbox" id="star23" name="rating" value="3"/>
+                                <label class="full" for="star23"></label>
+                                <input type="checkbox" id="star24" name="rating" value="2"/>
+                                <label class="full" for="star24"></label>
+                                <input type="checkbox" id="star25" name="rating" value="1"/>
+                                <label class="full" for="star25"></label>
+                            </fieldset>
+                            <span class="book-voters">1.987 voters</span>
+                        </div>
+                        <div class="book-sum"><h3>1000/- <span style="font-size: 16px">BDT.</span></h3>
+                        </div>
+                        <div class="book-see book-purple" style="cursor:pointer;" onclick="redirect_to('THE LORD OF THE RINGS',
+                        'https://m.media-amazon.com/images/I/71Coj2Sql6L._AC_UY327_FMwebp_QL65_.jpg',
+                        'JRR TOLKIEN',
+                        'Sauron, the Dark Lord, has gathered to him all the Rings of Power – the means by which he intends to rule Middle-earth. All he lacks in his plans for dominion is the One Ring – the ring that rules them all – which has fallen into the hands of the hobbit, Bilbo Baggins.In a sleepy village in the Shire, young Frodo Baggins finds himself faced with an immense task, as the Ring is entrusted to his care. He must leave his home and make a perilous journey across the realms of Middle-earth to the Crack of Doom, deep inside the territories of the Dark Lord. There he must destroy the Ring forever and foil the Dark Lord in his evil purpose.Since it was first published in 1954, ‘The Lord of the Rings’ has been a book people have treasured. Steeped in unrivalled magic and otherworldliness, its sweeping fantasy has touched the hearts of young and old alike.')">See The Book
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr style="margin-top: 80px">
+    <div class="container" id="best_deals">
+        <h4 style="text-align: center;padding: 30px;font-weight: bold;color: rgba(239,61,135,0.96)">SCIENCE AND PHILOSOPHY</h4>
+        <div class="book-slide">
+            <div class="book js-flickity" data-flickity-options='{ "wrapAround": true }'>
+                <div class="book-cell">
+                    <div class="book-img">
+                        <img src="https://m.media-amazon.com/images/I/41yu2qXhXXL.jpg" alt=""
+                             class="book-photo">
+                    </div>
+                    <div class="book-content">
+                        <div class="book-title">SAPIENS</div>
+                        <div class="book-author">by YUVAL NOAH HARARI</div>
+                        <div class="rate">
+                            <fieldset class="rating">
+                                <input type="checkbox" id="star5" name="rating" value="5"/>
+                                <label class="full" for="star5"></label>
+                                <input type="checkbox" id="star4" name="rating" value="4"/>
+                                <label class="full" for="star4"></label>
+                                <input type="checkbox" id="star3" name="rating" value="3"/>
+                                <label class="full" for="star3"></label>
+                                <input type="checkbox" id="star2" name="rating" value="2"/>
+                                <label class="full" for="star2"></label>
+                                <input type="checkbox" id="star1" name="rating" value="1"/>
+                                <label class="full" for="star1"></label>
+                            </fieldset>
+                            <span class="book-voters">1.987 voters</span>
+                        </div>
+                        <div class="book-sum"><h3>850/- <span style="font-size: 16px">BDT.</span></h3>
+                        </div>
+                        <div class="book-see" style="cursor:pointer;" onclick="redirect_to('SAPIENS',
+                        'https://m.media-amazon.com/images/I/41yu2qXhXXL.jpg',
+                        'YUVAL NOAH HARARI',
+                        'Fire gave us power. Farming made us hungry for more. Money gave us purpose. Science made us deadly.Brought to you by Penguin and read by Derek Perkins, this is the thrilling account of our extraordinary history – from insignificant apes to rulers of the world.Earth is 4.5 billion years old. In just a fraction of that time, one species among countless others has conquered it: us.In this bold and provocative audiobook, Yuval Noah Harari explores who we are, how we got here and where we’re going')">See The Book
+                        </div>
+
+                    </div>
+                </div>
+                <div class="book-cell">
+                    <div class="book-img">
+                        <img src="https://m.media-amazon.com/images/I/51-bIbzo1mL.jpg" alt=""
+                             class="book-photo">
+                    </div>
+                    <div class="book-content">
+                        <div class="book-title">THE SELFISH GENE</div>
+                        <div class="book-author">by RICHARDS DAWKINS</div>
+                        <div class="rate">
+                            <fieldset class="rating blue">
+                                <input type="checkbox" id="star6" name="rating" value="5"/>
+                                <label class="full1" for="star6"></label>
+                                <input type="checkbox" id="star7" name="rating" value="4"/>
+                                <label class="full1" for="star7"></label>
+                                <input type="checkbox" id="star8" name="rating" value="3"/>
+                                <label class="full1" for="star8"></label>
+                                <input type="checkbox" id="star9" name="rating" value="2"/>
+                                <label class="full1" for="star9"></label>
+                                <input type="checkbox" id="star10" name="rating" value="1"/>
+                                <label class="full1" for="star10"></label>
+                            </fieldset>
+                            <span class="book-voters">1.987 voters</span>
+                        </div>
+                        <div class="book-sum"><h3>260/- <span style="font-size: 16px">BDT.</span></h3>
+                        </div>
+                        <div class="book-see book-blue" style="cursor: pointer"
+                             onclick="redirect_to('THE SELFISH GENE',
+                        'https://m.media-amazon.com/images/I/51-bIbzo1mL.jpg',
+                        'RICHARDS DAWKINS',
+                        'The million copy international bestseller, critically acclaimed and translated into over 25 languages.As influential today as when it was first published, The Selfish Gene has become a classic exposition of evolutionary thought. Professor Dawkins articulates a gene's eye view of evolution - a view giving center stage to these persistent units of information and in which organisms can be seen as vehicles for their replication. This imaginative, powerful and stylistically brilliant work not only brought the insights of Neo-Darwinism to a wide audience, but galvanized the biology community, generating much debate and stimulating whole new areas of research. Forty years later, its insights remain as relevant today as on the day it was published.This 40th anniversary edition includes a new epilogue from the author discussing the continuing relevance of these ideas in evolutionary biology today, as well as the original prefaces and foreword and extracts from early reviews.Oxford Landmark Science books are 'must-read' classics of modern science writing which have crystallized big ideas and shaped the way we think.')">See The Book
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-cell">
+                    <div class="book-img">
+                        <img src="https://m.media-amazon.com/images/I/51e91glnHUL.jpg" alt=""
+                             class="book-photo">
+                    </div>
+                    <div class="book-content">
+                        <div class="book-title">COSMOS</div>
+                        <div class="book-author">by CARL SAGAN</div>
+                        <div class="rate">
+                            <fieldset class="rating dark-purp">
+                                <input type="checkbox" id="star21" name="rating" value="5"/>
+                                <label class="full" for="star21"></label>
+                                <input type="checkbox" id="star22" name="rating" value="4"/>
+                                <label class="full" for="star22"></label>
+                                <input type="checkbox" id="star23" name="rating" value="3"/>
+                                <label class="full" for="star23"></label>
+                                <input type="checkbox" id="star24" name="rating" value="2"/>
+                                <label class="full" for="star24"></label>
+                                <input type="checkbox" id="star25" name="rating" value="1"/>
+                                <label class="full" for="star25"></label>
+                            </fieldset>
+                            <span class="book-voters">1.987 voters</span>
+                        </div>
+                        <div class="book-sum"><h3>190/- <span style="font-size: 16px">BDT.</span></h3>
+                        </div>
+                        <div class="book-see book-purple" style="cursor:pointer;" onclick="redirect_to('CARL SAGAN',
+                        'https://m.media-amazon.com/images/I/51e91glnHUL.jpg',
+                        'COSMOS',
+                        'Cosmos is one of the bestselling science books of all time. In clear-eyed prose, Sagan reveals a jewel-like blue world inhabited by a life form that is just beginning to discover its own identity and to venture into the vast ocean of space. Cosmos retraces the fourteen billion years of cosmic evolution that have transformed matter into consciousness, exploring such topics as the origin of life, the human brain, Egyptian hieroglyphics, spacecraft missions, the death of the Sun, the evolution of galaxies, and the forces and individuals who helped to shape modern science.Includes introductory music: Heaven and Hell by Vangelis from Cosmos: A Personal Voyage used with permission from Druyan-Sagan Associates, Inc. All rights reserved.Praise for Cosmos“Magnificent... With a lyrical literary style, and a range that touches almost all aspects of human knowledge, Cosmos often seems too good to be true.” - The Plain Dealer“Sagan is an astronomer with one eye on the stars, another on history, and a third - his mind’s - on the human condition.” - Newsday“Brilliant in its scope and provocative in its suggestions...shimmers with a sense of wonder.” - The Miami Herald“Sagan dazzles the mind with the miracle of our survival, framed by the stately galaxies of space.” - Cosmopolitan“Enticing...iridescent...imaginatively illustrated.” - The New York Times Book Review')">See The Book
+                        </div>
+                    </div>
+                </div>
+                <div class="book-cell">
+                    <div class="book-img">
+                        <img src="https://m.media-amazon.com/images/I/41agR4J-KUS.jpg"
+                             alt=""
+                             class="book-photo">
+                    </div>
+                    <div class="book-content">
+                        <div class="book-title">A BRIEF HISTORY OF TIME</div>
+                        <div class="book-author">STEPHEN HAWKINS</div>
+                        <div class="rate">
+                            <fieldset class="rating purple">
+                                <input type="checkbox" id="star11" name="rating" value="5"/>
+                                <label class="full" for="star11"></label>
+                                <input type="checkbox" id="star12" name="rating" value="4"/>
+                                <label class="full" for="star12"></label>
+                                <input type="checkbox" id="star13" name="rating" value="3"/>
+                                <label class="full" for="star13"></label>
+                                <input type="checkbox" id="star14" name="rating" value="2"/>
+                                <label class="full" for="star14"></label>
+                                <input type="checkbox" id="star15" name="rating" value="1"/>
+                                <label class="full" for="star15"></label>
+                            </fieldset>
+                            <span class="book-voters">1.987 voters</span>
+                        </div>
+                        <div class="book-sum">
+                            <h3>2500/- <span style="font-size: 16px">BDT.</span></h3>
+                        </div>
+                        <div class="book-see book-pink" style="cursor:pointer;" onclick="redirect_to('A BRIEF HISTORY OF TIME',
+                        'https://m.media-amazon.com/images/I/41agR4J-KUS.jpg',
+                        'STEPHEN HAWKINS',
+                        'It begins by reviewing the great theories of the cosmos from Newton to Einstein, before delving into the secrets which still lie at the heart of space and time, from the Big Bang to black holes, via spiral galaxies and strong theory. To this day A Brief History of Time remains a staple of the scientific canon, and its succinct and clear language continues to introduce millions to the universe and its wonders.This new edition includes updates from Stephen Hawking with his latest thoughts about the No Boundary Proposal and offers new information about dark energy, the information paradox, eternal inflation, the microwave background radiation observations, and the discovery of gravitational waves.It was published in tandem with the app, Stephen Hawking's Pocket Universe.This book marries a child's wonder to a geniuss intellect. We journey into Hawking's universe while marvelling at his mind.The Sunday Times')">See The Book
+                        </div>
+                    </div>
+                </div>
+                <div class="book-cell">
+                    <div class="book-img">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/410A6spOjBL._SX322_BO1,204,203,200_.jpg" alt=""
+                             class="book-photo">
+                    </div>
+                    <div class="book-content">
+                        <div class="book-title">THE CODE BREAKER</div>
+                        <div class="book-author">by WALTER ISAACSON</div>
+                        <div class="rate">
+                            <fieldset class="rating yellow">
+                                <input type="checkbox" id="star16" name="rating" value="5"/>
+                                <label class="full" for="star16"></label>
+                                <input type="checkbox" id="star17" name="rating" value="4"/>
+                                <label class="full" for="star17"></label>
+                                <input type="checkbox" id="star18" name="rating" value="3"/>
+                                <label class="full" for="star18"></label>
+                                <input type="checkbox" id="star19" name="rating" value="2"/>
+                                <label class="full" for="star19"></label>
+                                <input type="checkbox" id="star20" name="rating" value="1"/>
+                                <label class="full" for="star20"></label>
+                            </fieldset>
+                            <span class="book-voters">1.987 voters</span>
+                        </div>
+                        <div class="book-sum"><h3>455/- <span style="font-size: 16px">BDT.</span></h3>
+                        </div>
+                        <div class="book-see book-yellow" style="cursor:pointer;" onclick="redirect_to('THE CODE BREAKER',
+                        'https://images-na.ssl-images-amazon.com/images/I/410A6spOjBL._SX322_BO1,204,203,200_.jpg',
+                        'WALTER ISAACSON',
+                        'The bestselling author of Leonardo da Vinci and Steve Jobs returns with a gripping account of how Nobel Prize winner Jennifer Doudna and her colleagues launched a revolution that will allow us to cure diseases, fend off viruses, and have healthier babies.')">See The Book
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr style="margin-top: 80px">
+    <div class="container" id="best_deals">
+        <h4 style="text-align: center;padding: 30px;font-weight: bold;color: rgb(30,120,189)">THRILLER</h4>
+        <div class="book-slide">
+            <div class="book js-flickity" data-flickity-options='{ "wrapAround": true }'>
+
+                <div class="book-cell">
+                    <div class="book-img">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/51OuP0mmnwL._SX322_BO1,204,203,200_.jpg" alt=""
+                             class="book-photo">
+                    </div>
+                    <div class="book-content">
+                        <div class="book-title">THE SILENT PATIENT</div>
+                        <div class="book-author">by ALEX MICHEALIDES</div>
+                        <div class="rate">
+                            <fieldset class="rating yellow">
+                                <input type="checkbox" id="star16" name="rating" value="5"/>
+                                <label class="full" for="star16"></label>
+                                <input type="checkbox" id="star17" name="rating" value="4"/>
+                                <label class="full" for="star17"></label>
+                                <input type="checkbox" id="star18" name="rating" value="3"/>
+                                <label class="full" for="star18"></label>
+                                <input type="checkbox" id="star19" name="rating" value="2"/>
+                                <label class="full" for="star19"></label>
+                                <input type="checkbox" id="star20" name="rating" value="1"/>
+                                <label class="full" for="star20"></label>
+                            </fieldset>
+                            <span class="book-voters">1.987 voters</span>
+                        </div>
+                        <div class="book-sum"><h3>455/- <span style="font-size: 16px">BDT.</span></h3>
+                        </div>
+                        <div class="book-see book-yellow" style="cursor:pointer;" onclick="redirect_to('THE SILENT PATIENT',
+                        'https://images-na.ssl-images-amazon.com/images/I/51OuP0mmnwL._SX322_BO1,204,203,200_.jpg',
+                        'ALEX MICHEALIDES',
+                        'WITH OVER THREE MILLION COPIES SOLD, read the Sunday Times and No.1 New York Times bestselling, record-breaking thriller that everyone is talking about - soon to be a major film.The perfect thriller AJ FINNTerrific - THE TIMES Crime Book of the MonthSmart, sophisticated suspense - LEE CHILDCompelling - OBSERVERAbsolutely brilliant - STEPHEN FRYA totally original psychological mystery - DAVID BALDACCIOne of the best thrillers I've read this year - CARA HUNTERThe pace and finesse of a master - BBC CULTUREAlicia Berenson lived a seemingly perfect life until one day six years ago.')">See The Book
+                        </div>
+                    </div>
+                </div>
+                <div class="book-cell">
+                    <div class="book-img">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/41s25iwW7zS._SX319_BO1,204,203,200_.jpg" alt=""
+                             class="book-photo">
+                    </div>
+                    <div class="book-content">
+                        <div class="book-title">THE GIRL ON THE TRAIN</div>
+                        <div class="book-author">by PAULA HAWKINS</div>
+                        <div class="rate">
+                            <fieldset class="rating dark-purp">
+                                <input type="checkbox" id="star21" name="rating" value="5"/>
+                                <label class="full" for="star21"></label>
+                                <input type="checkbox" id="star22" name="rating" value="4"/>
+                                <label class="full" for="star22"></label>
+                                <input type="checkbox" id="star23" name="rating" value="3"/>
+                                <label class="full" for="star23"></label>
+                                <input type="checkbox" id="star24" name="rating" value="2"/>
+                                <label class="full" for="star24"></label>
+                                <input type="checkbox" id="star25" name="rating" value="1"/>
+                                <label class="full" for="star25"></label>
+                            </fieldset>
+                            <span class="book-voters">1.987 voters</span>
+                        </div>
+                        <div class="book-sum"><h3>100/- <span style="font-size: 16px">BDT.</span></h3>
+                        </div>
+                        <div class="book-see book-purple" style="cursor:pointer;" onclick="redirect_to('THE GIRL ON THE TRAIN',
+                        'https://images-na.ssl-images-amazon.com/images/I/41s25iwW7zS._SX319_BO1,204,203,200_.jpg',
+                        'PAULA HAWKINS',
+                        'THE RUNAWAY SUNDAY TIMES NO.1 BESTSELLER AND THRILLER OF THE YEAR
+                       Really great suspense novel. Kept me up most of the night. The alcoholic narrator is dead perfect STEPHEN KINGRachel catches the same commuter train every morning. She knows it will wait at the same signal each time, overlooking a row of back gardens. Shes even started to feel like she knows the people who live in one of the houses. Jess and Jason, she calls them. Their life  as she sees it  is perfect. If only Rachel could be that happy.And then she sees something shocking. Its only a minute until the train moves on, but its enough.Now everythings changed. Now Rachel has a chance to become a part of the lives shes only watched from afar.Now theyll see; shes much more than just the girl on the train')">See The Book
+                        </div>
+                    </div>
+                </div>
+                <div class="book-cell">
+                    <div class="book-img">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/I/41jOwru1qML._SY264_BO1,204,203,200_QL40_FMwebp_.jpg" alt=""
+                             class="book-photo">
+                    </div>
+                    <div class="book-content">
+                        <div class="book-title">THE GUEST LIST</div>
+                        <div class="book-author">by LUCY FOLLEY</div>
+                        <div class="rate">
+                            <fieldset class="rating">
+                                <input type="checkbox" id="star5" name="rating" value="5"/>
+                                <label class="full" for="star5"></label>
+                                <input type="checkbox" id="star4" name="rating" value="4"/>
+                                <label class="full" for="star4"></label>
+                                <input type="checkbox" id="star3" name="rating" value="3"/>
+                                <label class="full" for="star3"></label>
+                                <input type="checkbox" id="star2" name="rating" value="2"/>
+                                <label class="full" for="star2"></label>
+                                <input type="checkbox" id="star1" name="rating" value="1"/>
+                                <label class="full" for="star1"></label>
+                            </fieldset>
+                            <span class="book-voters">1.987 voters</span>
+                        </div>
+                        <div class="book-sum"><h3>540/- <span style="font-size: 16px">BDT.</span></h3>
+                        </div>
+                        <div class="book-see" style="cursor:pointer;" onclick="redirect_to('THE GUEST LIST',
+                        'https://images-eu.ssl-images-amazon.com/images/I/41jOwru1qML._SY264_BO1,204,203,200_QL40_FMwebp_.jpg',
+                        'LUCY FOLLEY',
+                        'Another murder. Another mystery.The brand new thriller from the No. 1 Sunday Times bestselling author of The Hunting Party.On a remote island, guests gather for the wedding of the year  the marriage of Jules Keegan andWill Slater.Old friends.Past grudges.Happy families.Hidden jealousies.Thirteen guests.The wedding cake has barely been cut when one of the guests is found dead. And as a storm unleashes its fury on the island, everyone is trapped.All have a secret. All have a motive.')">See The Book
+                        </div>
+
+                    </div>
+                </div>
+                <div class="book-cell">
+                    <div class="book-img">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/I/41eadQmyoZL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg" alt=""
+                             class="book-photo">
+                    </div>
+                    <div class="book-content">
+                        <div class="book-title">THE JUDGE'S LIST</div>
+                        <div class="book-author">by JOHN GRISHAM</div>
+                        <div class="rate">
+                            <fieldset class="rating blue">
+                                <input type="checkbox" id="star6" name="rating" value="5"/>
+                                <label class="full1" for="star6"></label>
+                                <input type="checkbox" id="star7" name="rating" value="4"/>
+                                <label class="full1" for="star7"></label>
+                                <input type="checkbox" id="star8" name="rating" value="3"/>
+                                <label class="full1" for="star8"></label>
+                                <input type="checkbox" id="star9" name="rating" value="2"/>
+                                <label class="full1" for="star9"></label>
+                                <input type="checkbox" id="star10" name="rating" value="1"/>
+                                <label class="full1" for="star10"></label>
+                            </fieldset>
+                            <span class="book-voters">1.987 voters</span>
+                        </div>
+                        <div class="book-sum"><h3>220/- <span style="font-size: 16px">BDT.</span></h3>
+                        </div>
+                        <div class="book-see book-blue" style="cursor: pointer"
+                             onclick="redirect_to('THE JUDGES LIST',
+                        'https://images-eu.ssl-images-amazon.com/images/I/41eadQmyoZL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg',
+                        'JOHN GRISHAM',
+                        'In The Whistler, Lacy Stoltz investigated a corrupt judge who was taking millions in bribes from a crime syndicate. She put the criminals away, but only after being attacked and nearly killed. Three years later, and approaching forty, she is tired of her work for the Florida Board on Judicial Conduct and ready for a change.')">See The Book
+                        </div>
+                    </div>
+                </div>
+                <div class="book-cell">
+                    <div class="book-img">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/410i2hlkSLL._SX322_BO1,204,203,200_.jpg"
+                             alt=""
+                             class="book-photo">
+                    </div>
+                    <div class="book-content">
+                        <div class="book-title">VERITY</div>
+                        <div class="book-author">by COLLEN HOOVER</div>
+                        <div class="rate">
+                            <fieldset class="rating purple">
+                                <input type="checkbox" id="star11" name="rating" value="5"/>
+                                <label class="full" for="star11"></label>
+                                <input type="checkbox" id="star12" name="rating" value="4"/>
+                                <label class="full" for="star12"></label>
+                                <input type="checkbox" id="star13" name="rating" value="3"/>
+                                <label class="full" for="star13"></label>
+                                <input type="checkbox" id="star14" name="rating" value="2"/>
+                                <label class="full" for="star14"></label>
+                                <input type="checkbox" id="star15" name="rating" value="1"/>
+                                <label class="full" for="star15"></label>
+                            </fieldset>
+                            <span class="book-voters">1.987 voters</span>
+                        </div>
+                        <div class="book-sum">
+                            <h3>200/- <span style="font-size: 16px">BDT.</span></h3>
+                        </div>
+                        <div class="book-see book-pink" style="cursor:pointer;" onclick="redirect_to('VERITY',
+                        'https://images-na.ssl-images-amazon.com/images/I/410i2hlkSLL._SX322_BO1,204,203,200_.jpg',
+                        'COLLEN HOOVER',
+                        'Lowen Ashleigh is a struggling writer on the brink of financial ruin when she accepts the job offer of a lifetime. Jeremy Crawford, husband of bestselling author Verity Crawford, has hired Lowen to complete the remaining books in a successful series his injured wife is unable to finish')">See The Book
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr style="margin-top: 80px">
+    <div class="container" id="best_deals">
+        <h4 style="text-align: center;padding: 30px;font-weight: bold;color: #44cc35">FANTASY</h4>
+        <div class="book-slide">
+            <div class="book js-flickity" data-flickity-options='{ "wrapAround": true }'>
+                <div class="book-cell">
+                    <div class="book-img">
+                        <img src="https://m.media-amazon.com/images/I/51mRRHTzRWL.jpg" alt=""
+                             class="book-photo">
+                    </div>
+                    <div class="book-content">
+                        <div class="book-title">MOBY DICK</div>
+                        <div class="book-author">by HERMAN MELVILLE</div>
+                        <div class="rate">
+                            <fieldset class="rating">
+                                <input type="checkbox" id="star5" name="rating" value="5"/>
+                                <label class="full" for="star5"></label>
+                                <input type="checkbox" id="star4" name="rating" value="4"/>
+                                <label class="full" for="star4"></label>
+                                <input type="checkbox" id="star3" name="rating" value="3"/>
+                                <label class="full" for="star3"></label>
+                                <input type="checkbox" id="star2" name="rating" value="2"/>
+                                <label class="full" for="star2"></label>
+                                <input type="checkbox" id="star1" name="rating" value="1"/>
+                                <label class="full" for="star1"></label>
+                            </fieldset>
+                            <span class="book-voters">1.987 voters</span>
+                        </div>
+                        <div class="book-sum"><h3>85/- <span style="font-size: 16px">BDT.</span></h3>
+                        </div>
+                        <div class="book-see" style="cursor:pointer;" onclick="redirect_to('MOBY DICK',
+                        'https://m.media-amazon.com/images/I/51mRRHTzRWL.jpg',
+                        'HERMAN MELVILLE',
+                        'Moby-Dick is an 1851 novel by American writer Herman Melville.The book is sailor Ishmael's narrative of the obsessive quest of Ahab, captain of the whaling ship Pequod, for revenge on Moby Dick, the giant white sperm whale that on the ship's previous voyage bit off Ahab's leg at the knee.A contribution to the literature of the American Renaissance, its reputation as a Great American Novel was established only in the 20th century, after the centennial of its authors birth.')">See The Book
+                        </div>
+
+                    </div>
+                </div>
+                <div class="book-cell">
+                    <div class="book-img">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/51BATe+7wRS._SY344_BO1,204,203,200_.jpg" alt=""
+                             class="book-photo">
+                    </div>
+                    <div class="book-content">
+                        <div class="book-title">THE PICTURE OF DORIAN GRAY</div>
+                        <div class="book-author">by OSCAR WILD</div>
+                        <div class="rate">
+                            <fieldset class="rating blue">
+                                <input type="checkbox" id="star6" name="rating" value="5"/>
+                                <label class="full1" for="star6"></label>
+                                <input type="checkbox" id="star7" name="rating" value="4"/>
+                                <label class="full1" for="star7"></label>
+                                <input type="checkbox" id="star8" name="rating" value="3"/>
+                                <label class="full1" for="star8"></label>
+                                <input type="checkbox" id="star9" name="rating" value="2"/>
+                                <label class="full1" for="star9"></label>
+                                <input type="checkbox" id="star10" name="rating" value="1"/>
+                                <label class="full1" for="star10"></label>
+                            </fieldset>
+                            <span class="book-voters">1.987 voters</span>
+                        </div>
+                        <div class="book-sum"><h3>165/- <span style="font-size: 16px">BDT.</span></h3>
+                        </div>
+                        <div class="book-see book-blue" style="cursor: pointer"
+                             onclick="redirect_to('THE PICTURE OF DORIAN GRAY',
+                        'https://images-na.ssl-images-amazon.com/images/I/51BATe+7wRS._SY344_BO1,204,203,200_.jpg',
+                        'OSCAR WILD',
+                        '“The soul is a terrible reality. It can be bought and sold and bartered away.” meet Dorian Gray, the beautiful young man with an impossibly charming face and spirit. As he sits for Basil Hallward—a deeply moral artist and a friend of the impish Lord Henry—who becomes obsessed with his beauty and wants to paint him, Dorian is enchanted by the perfection of his portrait. But, influenced by the well-phrased epigrams of the hedonist Lord Henry on the transience of youth and beauty, Dorian becomes jealous of it and wishes that the portrait bear the scars of his passing youth and age, while he would remain young forever. And alas, his wish comes true! Br>enticed into dissolution and degradation while his portrait is aging in the attic, Dorian engages in scandals and sinful pleasures. We see him go from good to evil. But is he any happier? This is a leather-bound deluxe edition of the only novel written by Oscar Wilde, the picture of Dorian Gray is an arresting moral commentary and a classic example of Gothic fiction. With an unparalleled depiction of the Faustian bargain, this parable of aesthetic ideal remains a literary masterpiece almost 125 years after its publication.')">See The Book
+                        </div>
+                    </div>
+                </div>
+                <div class="book-cell">
+                    <div class="book-img">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/41IpL+kC5US._SX322_BO1,204,203,200_.jpg"
+                             alt=""
+                             class="book-photo">
+                    </div>
+                    <div class="book-content">
+                        <div class="book-title">THE ODYSSEY</div>
+                        <div class="book-author">by HOMER</div>
+                        <div class="rate">
+                            <fieldset class="rating purple">
+                                <input type="checkbox" id="star11" name="rating" value="5"/>
+                                <label class="full" for="star11"></label>
+                                <input type="checkbox" id="star12" name="rating" value="4"/>
+                                <label class="full" for="star12"></label>
+                                <input type="checkbox" id="star13" name="rating" value="3"/>
+                                <label class="full" for="star13"></label>
+                                <input type="checkbox" id="star14" name="rating" value="2"/>
+                                <label class="full" for="star14"></label>
+                                <input type="checkbox" id="star15" name="rating" value="1"/>
+                                <label class="full" for="star15"></label>
+                            </fieldset>
+                            <span class="book-voters">1.987 voters</span>
+                        </div>
+                        <div class="book-sum">
+                            <h3>315/- <span style="font-size: 16px">BDT.</span></h3>
+                        </div>
+                        <div class="book-see book-pink" style="cursor:pointer;" onclick="redirect_to('THE ODYSSEY',
+                        'https://images-na.ssl-images-amazon.com/images/I/41IpL+kC5US._SX322_BO1,204,203,200_.jpg',
+                        'HOMER',
+                        'After the fall of Troy, the intrepid Odysseus sets sail for Ithaca. En route, his ships are blown off course and Odysseus and his men must face a series of adventures before they can reach home. He has to beguile the enchantress Circe, defeat the six-headed sea monster Scylla, and resist the lure of the Siren’s song. And as he negotiates the favours bestowed on him by the goddess Athena and faces the wrath of god of the sea, Poseidon. Odysseus understands that he will have to rely on himself to overcome this ultimate test of endurance.The Odyssey is one of the most important epic poems of Greek mythology. It describes a rousing adventure and, in doing so, explores the various facets of the human condition.')">See The Book
+                        </div>
+                    </div>
+                </div>
+                <div class="book-cell">
+                    <div class="book-img">
+                        <img src="https://m.media-amazon.com/images/I/71Q-cHRwiGL._AC_UY327_FMwebp_QL65_.jpg" alt=""
+                             class="book-photo">
+                    </div>
+                    <div class="book-content">
+                        <div class="book-title">A TALE OF TWO CITIES</div>
+                        <div class="book-author">by CHARLES DICKENS</div>
+                        <div class="rate">
+                            <fieldset class="rating yellow">
+                                <input type="checkbox" id="star16" name="rating" value="5"/>
+                                <label class="full" for="star16"></label>
+                                <input type="checkbox" id="star17" name="rating" value="4"/>
+                                <label class="full" for="star17"></label>
+                                <input type="checkbox" id="star18" name="rating" value="3"/>
+                                <label class="full" for="star18"></label>
+                                <input type="checkbox" id="star19" name="rating" value="2"/>
+                                <label class="full" for="star19"></label>
+                                <input type="checkbox" id="star20" name="rating" value="1"/>
+                                <label class="full" for="star20"></label>
+                            </fieldset>
+                            <span class="book-voters">1.987 voters</span>
+                        </div>
+                        <div class="book-sum"><h3>455/- <span style="font-size: 16px">BDT.</span></h3>
+                        </div>
+                        <div class="book-see book-yellow" style="cursor:pointer;" onclick="redirect_to('A TALE OF TWO CITIES',
+                        'https://m.media-amazon.com/images/I/71Q-cHRwiGL._AC_UY327_FMwebp_QL65_.jpg',
+                        'CHARLES DICKENS',
+                        'One of the best-selling novels of all time, A Tale of Two Cities is arguably Charles Dickens' best historical fiction stories. It explores the intricacies of a pre-revolution France and the simmering anger that led to the end of a monarchy.
+
+Follow Doctor Manette, newly released from an eighteen-year imprisonment in the infamous Bastille, as he moves away from the tyrannical French monarchy.Liberty, Equality, Fraternity, or Death!Walk with Manette through the streets of nineteenth-century London as the anger of the people reached its boiling point. The political tensions are high, they've had enough, and they are not afraid anymore.This story is one of conflicts, brutality, and of a history-altering revolution. Charles Dickens' best-selling novel is a roller coaster that will carry readers through some of the most tumultuous events in history. Stand in the shoes of the people who lived it and leave with a completely new perspective on what it means to be human.')">See The Book
+                        </div>
+                    </div>
+                </div>
+                <div class="book-cell">
+                    <div class="book-img">
+                        <img src="https://m.media-amazon.com/images/I/71Coj2Sql6L._AC_UY327_FMwebp_QL65_.jpg" alt=""
+                             class="book-photo">
+                    </div>
+                    <div class="book-content">
+                        <div class="book-title">THE LORD OF THE RINGS</div>
+                        <div class="book-author">by JRR TOLKIEN</div>
+                        <div class="rate">
+                            <fieldset class="rating dark-purp">
+                                <input type="checkbox" id="star21" name="rating" value="5"/>
+                                <label class="full" for="star21"></label>
+                                <input type="checkbox" id="star22" name="rating" value="4"/>
+                                <label class="full" for="star22"></label>
+                                <input type="checkbox" id="star23" name="rating" value="3"/>
+                                <label class="full" for="star23"></label>
+                                <input type="checkbox" id="star24" name="rating" value="2"/>
+                                <label class="full" for="star24"></label>
+                                <input type="checkbox" id="star25" name="rating" value="1"/>
+                                <label class="full" for="star25"></label>
+                            </fieldset>
+                            <span class="book-voters">1.987 voters</span>
+                        </div>
+                        <div class="book-sum"><h3>1000/- <span style="font-size: 16px">BDT.</span></h3>
+                        </div>
+                        <div class="book-see book-purple" style="cursor:pointer;" onclick="redirect_to('THE LORD OF THE RINGS',
+                        'https://m.media-amazon.com/images/I/71Coj2Sql6L._AC_UY327_FMwebp_QL65_.jpg',
+                        'JRR TOLKIEN',
+                        'Sauron, the Dark Lord, has gathered to him all the Rings of Power – the means by which he intends to rule Middle-earth. All he lacks in his plans for dominion is the One Ring – the ring that rules them all – which has fallen into the hands of the hobbit, Bilbo Baggins.In a sleepy village in the Shire, young Frodo Baggins finds himself faced with an immense task, as the Ring is entrusted to his care. He must leave his home and make a perilous journey across the realms of Middle-earth to the Crack of Doom, deep inside the territories of the Dark Lord. There he must destroy the Ring forever and foil the Dark Lord in his evil purpose.Since it was first published in 1954, ‘The Lord of the Rings’ has been a book people have treasured. Steeped in unrivalled magic and otherworldliness, its sweeping fantasy has touched the hearts of young and old alike.')">See The Book
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
